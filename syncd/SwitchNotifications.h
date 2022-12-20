@@ -149,7 +149,7 @@ namespace syncd
                 }
         };
 
-            static std::vector<SwitchNotifications::SlotBase*> m_slots;
+            static std::vector<std::shared_ptr<SwitchNotifications::SlotBase>> m_slots;
 
         public:
 
@@ -172,6 +172,6 @@ namespace syncd
 
         private:
 
-            SlotBase*m_slot;
+            std::shared_ptr<SlotBase> m_slot;
     };
 }
